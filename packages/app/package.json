@@ -6,8 +6,9 @@
     ".": "./src/infra/index.ts"
   },
   "scripts": {
-    "deploy": "cdk deplay --require-approval never --concurrency 8 --asset-parallelism",
-    "synth": "cdk synth --quiet"
+    "deploy": "cdk deploy --require-approval never --concurrency 8 --asset-parallelism",
+    "synth": "cdk synth --quiet",
+    "test": "NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules --no-warnings\" npx jest"
   },
   "author": "",
   "license": "ISC",

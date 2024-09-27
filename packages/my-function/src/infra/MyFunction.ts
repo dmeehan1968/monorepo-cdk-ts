@@ -6,7 +6,7 @@ export class MyFunction extends Construct {
   constructor(scope: Construct, id: string) {
     super(scope, id)
 
-    new NodejsFunction(this, 'Default', {
+    const fn = new NodejsFunction(this, 'Default', {
       entry: new URL('./MyFunction.handler.ts', import.meta.url).pathname,
       bundling: {
         format: OutputFormat.ESM,

@@ -7,7 +7,7 @@
     "./infra": "./src/infra/index.ts"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules --no-warnings\" npx jest"
   },
   "author": "",
   "license": "ISC",
