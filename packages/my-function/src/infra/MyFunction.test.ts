@@ -1,7 +1,6 @@
 import { App, Stack } from 'aws-cdk-lib';
 import { Template } from 'aws-cdk-lib/assertions';
 import { MyFunction } from './MyFunction.js'
-import { jest } from '@jest/globals'
 
 describe('MyStack', () => {
 
