@@ -1,5 +1,5 @@
 {
-  "app": "npx tsx src/infra/index.ts",
+  "app": "npx tsx src/bin/index.ts",
   "watch": {
     "include": [
       "**"

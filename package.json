@@ -6,7 +6,9 @@
     "monorepo-cdk-ts": "bin/monorepo-cdk-ts.js"
   },
   "scripts": {
-    "app:deploy": "cd packages/app; npm run deploy"
+    "app:deploy": "cd packages/app; npm run deploy",
+    "app:synth": "cd packages/app; npm run synth",
+    "test": "NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules --no-warnings\" npx jest"
   },
   "devDependencies": {
     "@types/jest": "^29.5.12",
