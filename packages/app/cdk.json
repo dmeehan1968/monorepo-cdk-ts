@@ -1,5 +1,5 @@
 {
-  "app": "npx ts-node --prefer-ts-exts bin/monorepo-cdk-ts.ts",
+  "app": "npx tsx src/infra/index.ts",
   "watch": {
     "include": [
       "**"

@@ -1,13 +1,22 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "module": "commonjs",
-    "lib": [
-      "es2020",
-      "dom"
-    ],
+    "composite": true,
     "declaration": true,
+    "declarationMap": true,
+    "incremental": true,
+    "noEmit": true,
+    "noEmitOnError": true,
+    "skipLibCheck": true,
+
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "target": "esnext",
+    "module": "NodeNext",
+    "lib": [ "esnext" ],
     "strict": true,
+    "forceConsistentCasingInFileNames": true,
+
     "noImplicitAny": true,
     "strictNullChecks": true,
     "noImplicitThis": true,
@@ -20,16 +29,14 @@
     "inlineSources": true,
     "experimentalDecorators": true,
     "strictPropertyInitialization": false,
+    "baseUrl": ".",
+    "resolveJsonModule": true,
+    "moduleResolution": "NodeNext",
+    "allowJs": true,
+
     "typeRoots": [
       "./node_modules/@types"
-    ]
+    ],
   },
-  "exclude": [
-    "node_modules",
-    "cdk.out"
-  ],
-  "references": [{
-    "path": "./packages/my-function",
-  }
-  ]
+  "files": []
 }
