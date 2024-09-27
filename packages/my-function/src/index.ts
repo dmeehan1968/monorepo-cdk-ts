@@ -1,1 +1,1 @@
-export * from './infra/index.js'
+export * from './infra/MyFunction.js'
