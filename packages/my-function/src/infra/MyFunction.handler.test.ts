@@ -1,6 +1,7 @@
 import { handler } from './MyFunction.handler.js'
 import { jest } from '@jest/globals'
 import type { SpyInstance } from 'jest-mock'
+import { Context } from 'node:vm'
 
 describe('MyFunction.handler', () => {
 
@@ -16,7 +17,7 @@ describe('MyFunction.handler', () => {
   })
 
   it('should log to console', async () => {
-    handler({})
+    await handler({}, {} as Context)
     expect(consoleSpy).toHaveBeenCalledWith('Hello, world!')
   })
 
