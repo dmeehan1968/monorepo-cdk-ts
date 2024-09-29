@@ -11,4 +11,5 @@ export default {
     // Remove the .mjs extension from relative imports
     '^(\\.{1,2}/.*)\\.m?js$': '$1',
   },
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
 }

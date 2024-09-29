@@ -1,0 +1,26 @@
+{
+  "name": "@monorepo/jest-cdk-matchers",
+  "version": "1.0.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./index.d.ts",
+        "default": "./index.ts"
+      },
+      "types": "./index.d.ts"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "aws-cdk-lib": "^2.160.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.6.2"
+  }
+}

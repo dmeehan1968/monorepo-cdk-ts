@@ -13,6 +13,6 @@ describe('MyStack', () => {
   })
 
   it('should have a MyFunction construct', () => {
-    expect(sut.node.findChild('MyFunction')).toBeInstanceOf(MyFunction)
+    expect(sut).toHaveCdkChild('MyFunction', MyFunction)
   })
 });

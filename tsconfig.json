@@ -22,13 +22,20 @@
     "strictPropertyInitialization": false,
     "resolveJsonModule": true,
     "typeRoots": [
-      "./node_modules/@types"
+      "./node_modules/@types",
+    ],
+    "types": [
+      "jest",
+      "@monorepo/jest-cdk-matchers",
     ],
     "rootDir": "."
   },
-  "include": [],
-  "references": [{
-    "path": "./packages/my-function",
-  }
+  "include": [
+    "./jest.setup.ts"
+  ],
+  "references": [
+    { "path": "./packages/app" },
+    { "path": "./packages/jest-cdk-matchers" },
+    { "path": "./packages/my-function" }
   ]
 }

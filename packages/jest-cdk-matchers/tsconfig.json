@@ -2,10 +2,7 @@
   "extends": ["../../tsconfig.package.json"],
   "compilerOptions": {
     "outDir": "dist",
-    "rootDir": "src"
+    "noEmit":  true
   },
-  "include": [
-    "src/**/*.ts",
-    "../../jest.setup.ts"
-  ]
+  "include": ["**/*.ts", "index.d.ts"]
 }
