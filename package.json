@@ -2,9 +2,6 @@
   "name": "monorepo-cdk-ts",
   "private": true,
   "version": "0.1.0",
-  "bin": {
-    "monorepo-cdk-ts": "bin/monorepo-cdk-ts.js"
-  },
   "scripts": {
     "app:deploy": "cd packages/app; npm run deploy",
     "app:synth": "cd packages/app; npm run synth",
@@ -18,11 +15,7 @@
     "ts-node": "^10.9.2",
     "typescript": "~5.6.2"
   },
-  "dependencies": {
-    "@monorepo/my-function": "^1.0.0"
-  },
   "workspaces": [
-    "apps/*",
     "packages/*"
   ]
 }
