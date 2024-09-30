@@ -5,10 +5,10 @@
   "exports": {
     ".": {
       "import": {
-        "types": "./types.d.ts",
-        "default": "./index.ts"
+        "types": "./src/types.d.ts",
+        "default": "./src/index.ts"
       },
-      "types": "./types.d.ts"
+      "types": "./src/types.d.ts"
     }
   },
   "author": "",
