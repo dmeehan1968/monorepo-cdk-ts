@@ -21,7 +21,7 @@ export function toHaveCdkLambda(template: Template, logicalIdPrefix: string, pro
   return toHaveCdkResource(template, 'AWS::Lambda::Function', logicalIdPrefix, properties)
 }
 
-type Constructable = new (...args: never[]) => never
+export type Constructable = new (...args: never[]) => never
 
 export function toHaveCdkChild(stack: Stack, logicalId: string, constructor: Constructable) {
   const child = stack.node.findChild(logicalId)

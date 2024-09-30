@@ -48,7 +48,7 @@ Includes custom matchers (a sub-package of the monorepo)
 
 ## tsconfig.json
 
-Root tsconfig used for unit testing, and establishing references for all of the 
+Root tsconfig used for unit testing, and establishing references for all the 
 packages in the monorepo.
 
 ## tsconfig.package.json

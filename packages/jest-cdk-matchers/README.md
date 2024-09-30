@@ -15,7 +15,7 @@ module.exports = {
 Create a `jest.setup.ts` file in the root of your project, and add the following:
 
 ```typescript
-import '@monorepo/jest-cdk-matchers'
+import '@monorepo/jest-cdk-matchers/types'
 ```
 
 Now you can use the custom matchers in your tests:
