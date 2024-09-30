@@ -1,34 +1,16 @@
 {
+  "extends": ["./tsconfig.base.json"],
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
-    "lib": [
-      "ESNext"
-    ],
+    "rootDir": "./",
     "declaration": true,
-    "strict": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "noImplicitThis": true,
-    "alwaysStrict": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": false,
-    "inlineSourceMap": true,
-    "inlineSources": true,
-    "experimentalDecorators": true,
-    "strictPropertyInitialization": false,
-    "resolveJsonModule": true,
+
     "typeRoots": [
-      "./node_modules/@types",
+      "./node_modules/@types"
     ],
     "types": [
       "jest",
-      "@monorepo/jest-cdk-matchers",
-    ],
-    "rootDir": "."
+      "@monorepo/jest-cdk-matchers"
+    ]
   },
   "include": [
     "./jest.setup.ts"
