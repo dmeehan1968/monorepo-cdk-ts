@@ -1,7 +1,7 @@
 import { Template } from 'aws-cdk-lib/assertions'
 import { Stack } from 'aws-cdk-lib'
 
-export function toHaveCdkResource(template: Template, resourceType: string, logicalIdPrefix: string, properties?: any) {
+export function toHaveCdkResource(template: Template, resourceType: string, logicalIdPrefix: string, properties?: object) {
   const resources = template.findResources(resourceType)
   const regex = new RegExp(`^${logicalIdPrefix}[0-9a-f]{8}$`, 'i')
   const logicalId = Object.keys(resources).find(k => regex.test(k))
@@ -17,16 +17,18 @@ export function toHaveCdkResource(template: Template, resourceType: string, logi
   }
 }
 
-export function toHaveCdkLambda(template: Template, logicalIdPrefix: string, properties?: any) {
+export function toHaveCdkLambda(template: Template, logicalIdPrefix: string, properties?: object) {
   return toHaveCdkResource(template, 'AWS::Lambda::Function', logicalIdPrefix, properties)
 }
 
-export function toHaveCdkChild(stack: Stack, logicalId: string, klass: new (...args: any[]) => any) {
+type Constructable = new (...args: never[]) => never
+
+export function toHaveCdkChild(stack: Stack, logicalId: string, constructor: Constructable) {
   const child = stack.node.findChild(logicalId)
-  const pass = child instanceof klass
+  const pass = child instanceof constructor
   return {
     pass,
-    message: () => `Expected stack ${pass ? 'not ' : ''}to have a child of type ${klass.name}`,
+    message: () => `Expected stack ${pass ? 'not ' : ''}to have a child of type ${constructor.name}`,
   }
 }
 

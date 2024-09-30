@@ -1,6 +1,6 @@
 import middy from '@middy/core'
 
 export const handler = middy()
-  .handler((event: unknown) => {
+  .handler(() => {
     console.log('Hello, world!')
   })
